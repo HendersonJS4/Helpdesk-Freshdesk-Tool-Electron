@@ -10,6 +10,6 @@ A tool made with electron to modify / reply to multiple tickets at once.
       Linux: npm run package-linux<br>
 <br>
 (not tested on Mac and Linux!)
-
+<br>
 ![image](https://user-images.githubusercontent.com/92596776/137599238-0bb2e906-0d08-48f6-9881-0462dc7866b1.png)
 
