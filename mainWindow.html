@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Helpdesk - Ticket Tool (HDTT)</title>
+  <script type="text/javascript" src="function.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <nav>
+    <div class="headline">
+      <a class="colored-headline" id="title">Authentification Code</a>   
+    </div>
+  </nav>
+<br>
+  <input type="text" id="x-csrf-token" name="X-CSRF-Token" placeholder="Generated X-CSRF token" readonly>
+<br>
+  <nav>
+    <div class="headline">
+      <a class="colored-headline">Ticket IDs</a>
+    </div>
+  </nav>
+<br>
+  <input type="text" id="ticket-ids" name="Ticket-IDs" placeholder="Insert Ticket IDs (123456,234567,345678,...)">
+<br>
+<br>
+  <nav>
+    <div class="headline">
+      <a class="colored-headline">Ticket Options</a>
+    </div>
+  </nav>
+    <div class="test">
+      <div class="priority">
+        <p>Priority</p>
+          <label for="low">
+            <input id="low" type="radio" name="Priority" onclick="color();" value="1">Low
+          </label>
+        <br>
+          <label for="medium">
+            <input id="medium" type="radio" name="Priority" onclick="color();" value="2" checked>Medium
+          </label>
+        <br>
+          <label for="high">
+            <input id="high" type="radio" name="Priority" onclick="color();" value="3">High
+          </label>
+        <br>
+          <label for="urgent">
+            <input id="urgent" type="radio" name="Priority" onclick="color();" value="4">Urgent
+          </label>
+      </div>
+      <div class="status">
+        <p>Status</p>
+          <label for="open">
+            <input id="open" type="radio" name="Status" onclick="color();" value="2">Open
+          </label>
+        <br>
+          <label for="pending">
+            <input id="pending" type="radio" name="Status" onclick="color();" value="3" checked>Pending
+          </label>
+        <br>
+          <label for="closed">
+            <input id="closed" type="radio" name="Status" onclick="color();" value="5">Closed
+          </label>
+      </div>
+      <div class="agent">
+        <p>Agent</p>
+        <select id="agents" name="agent">
+            <option value="">--</option>
+            <option value="0123456789">Agent</option> <!--Add value id of agent to transfer tickets to-->
+          </select>
+        </div>
+    </div>
+  <br>
+    <nav>
+      <div class="headline">
+        <a class="colored-headline">Ticket Response</a>
+      </div>
+    </nav>
+  <br>
+    <input type="text" id="ticket-response" name="Ticket-Response" placeholder="Ticket response">
+  <br>
+  <br>
+    <button onclick="xcsrf();" type="submit" id="submit">Submit</button>
+    <input type="text" id="estTime" name="estTime" placeholder="Estimated time" readonly>
+    <input type="text" id="n-tickets" name="n-Tickets" placeholder="Ticket count" readonly>
+
+<script>
+function color() {
+  document.getElementById('estTime').style.backgroundColor = '#CECECE';
+}
+
+
+document.getElementById('ticket-ids').addEventListener('change', function () {
+  setIDs();
+  estimatedTime();
+
+  if (document.getElementById('ticket-ids').value == ""){
+    document.getElementById('n-tickets').value = "Ticket count: 0"
+  } else {
+  document.getElementById('n-tickets').value = "Ticket count: " + data2.length;
+  }
+  document.getElementById('estTime').style.backgroundColor = '#CECECE';
+});
+
+
+document.getElementById('ticket-response').addEventListener('change', function () {
+  estimatedTime();
+  document.getElementById('estTime').style.backgroundColor = '#CECECE';
+});
+
+
+document.getElementById('agents').addEventListener('change', function () {
+  document.getElementById('estTime').style.backgroundColor = '#CECECE';
+})
+
+
+document.getElementById('submit').addEventListener('click', function () {
+  this.disabled = true;
+  document.getElementById('estTime').style.backgroundColor = 'orange';
+});
+</script>
+
+<br>
+<br>
+</body>
+</html>

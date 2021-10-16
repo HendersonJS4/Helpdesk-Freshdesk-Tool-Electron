@@ -1,0 +1,66 @@
+html * {
+    font-family: 'Roboto', serif !important;
+  }
+.headline {
+  position: initial;
+  width: 855px;
+  height: 45px;
+  background-color: #0C2577; /* #EE6E73 */
+  border-radius: 0px;
+  font-size: x-large;
+  text-align: center;
+  color: #fff;
+  line-height: 45px;
+}
+p {
+  font-weight: bold;
+  color: black;
+}
+.test div {
+  color: teal;
+  display: inline-block;
+  position: relative;
+}
+.test div.priority {
+  width: fit-content;
+}
+.test div.status {
+  width: fit-content;
+  bottom: 19px;
+  left: 100px;
+}
+.test div.agent {
+  color: red;
+  width: fit-content;
+  bottom: 60px;
+  left: 200px;
+}
+input:not([type]), input[type=text] {
+  width: 847px;
+  height: 40px;
+  left: 40px;
+  text-align: center;
+}
+footer {
+  height: 10px;
+  color: #3B3B3B;
+  opacity: 0.6;
+}
+#x-csrf-token {
+  background-color: #CECECE;
+}
+#estTime {
+  position:absolute;
+  margin-left: 560px;
+  height: 16px;
+  width: 255px;
+  background-color: #CECECE;
+}
+#n-tickets {
+  position:absolute;
+  margin-left: 560px;
+  margin-top: 30px;
+  height: 16px;
+  width: 255px;
+  background-color: #CECECE;
+}
