@@ -4,8 +4,9 @@ A tool made with electron to modify / reply to multiple tickets at once.
 !!!README in progress!!!
 
 mainWindow.html & main.js & function.js need to be edited to your own freshdesk url and agents id's / names.
-<br>
+<br><br>
 You can modify (change agent, change status, change priority) roughly 18 tickets / second.
+<br>
 To not cause too much load on the server replies are sent at the speed of roughly 2.5 tickets / second.
 <br>
 
