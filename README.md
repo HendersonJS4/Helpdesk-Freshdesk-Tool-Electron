@@ -1,5 +1,6 @@
 # Helpdesk-Freshdesk-Tool-Electron
 A tool made with electron to modify / reply to multiple tickets at once.
+Replies are sent to the Cc mail of the requester => Cc mail needs to be in the ticket request or the fetch in function.js needs to be altered.
 
 !!!README in progress!!!
 
